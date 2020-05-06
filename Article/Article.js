@@ -147,12 +147,26 @@ function MakeArticle(articleObj){
     articleContainer.classList.toggle('article-open');
   })
 
+  //stretch
+
+  const closeButton = document.createElement('button');
+  closeButton.classList.add('closeButton');
+  closeButton.textContent = 'X';
+  closeButton.addEventListener('click', () => {
+    articleContainer.classList.toggle('hide-article');
+  })
+
+  //end stretch
+
   articleContainer.appendChild(articleTitle);
   articleContainer.appendChild(articleDate);
   articleContainer.appendChild(firstPara);
   articleContainer.appendChild(secondPara);
   articleContainer.appendChild(thirdPara);
   articleContainer.appendChild(expandButton);
+  //stretch
+  articleContainer.prepend(closeButton);
+  //end stretch
 
   return articleContainer;
 }
