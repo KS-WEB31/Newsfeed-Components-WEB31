@@ -85,6 +85,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Meteors!',
+    date: 'May 6, 2020',
+    firstParagraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget lorem quis tortor laoreet mollis eget a nisl. Fusce dictum orci at vestibulum tincidunt. Vivamus non commodo augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed consequat sagittis leo, vel dapibus justo sodales vitae. Vivamus convallis finibus nunc, ut fermentum urna placerat sit amet. Proin condimentum nisi id purus mollis, vitae iaculis erat interdum. Fusce molestie magna in sapien placerat consequat. Nunc volutpat efficitur tristique. Nam nec ipsum dapibus ligula porttitor pretium a id erat. Maecenas varius tortor laoreet, commodo tellus id, efficitur erat. Vestibulum sit amet leo non quam venenatis luctus nec nec elit.',
+    secondParagraph: 'Proin at ante eget elit tristique mattis sit amet non leo. Etiam magna urna, sollicitudin quis posuere eu, gravida nec justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse magna enim, iaculis ac vestibulum id, cursus nec nisi. Nulla facilisi. Maecenas vel finibus massa. Proin mattis, nulla quis semper maximus, elit odio congue ipsum, sed laoreet ipsum sem et ex. Proin et est tincidunt augue lobortis facilisis. Sed consequat, mi id laoreet suscipit, mauris tellus luctus nibh, quis gravida elit sem ac turpis. Etiam vitae nulla nec turpis hendrerit efficitur efficitur aliquet elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+    thirdParagraph: 'Maecenas commodo et enim ut facilisis. Nullam mi justo, condimentum quis erat nec, aliquet blandit ipsum. Curabitur bibendum elit nec lobortis vehicula. Curabitur rutrum gravida facilisis. Quisque eget cursus dolor, blandit blandit metus. Morbi placerat ante nibh. Cras gravida viverra metus non sodales. Morbi sit amet tempus tortor. Morbi venenatis metus vel ex vestibulum porttitor. Phasellus ultricies cursus purus in eleifend. Ut volutpat tellus nulla. Proin nisl libero, iaculis quis imperdiet ac, feugiat nec lacus.'
   }
 ];
 
@@ -135,6 +142,7 @@ function MakeArticle(articleObj){
 
   const expandButton = document.createElement('span');
   expandButton.classList.add('expandButton');
+  expandButton.textContent = '...';
   expandButton.addEventListener('click', () => {
     articleContainer.classList.toggle('article-open');
   })
