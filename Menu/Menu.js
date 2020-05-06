@@ -46,4 +46,18 @@ function MakeMenuComponent(menuArray){
 
     itemContainer.appendChild(newMenuItem);
   })
+
+  menu.appendChild(itemContainer);
+
+  const menuButton = document.querySelector('.menu-button');
+  menuButton.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+  })
+
+  const header = document.querySelector('.header');
+  header.appendChild(menu);
+
+  return menu;
 }
+
+MakeMenuComponent(menuItems);
