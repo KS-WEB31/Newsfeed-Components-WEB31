@@ -149,3 +149,10 @@ function MakeArticle(articleObj){
   return articleContainer;
 }
 
+const articles = document.querySelector('.articles');
+
+data.forEach((articleObj) => {
+  const newArticle = MakeArticle(articleObj);
+
+  articles.appendChild(newArticle);
+})
