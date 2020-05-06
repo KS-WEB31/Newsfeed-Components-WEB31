@@ -135,6 +135,9 @@ function MakeArticle(articleObj){
 
   const expandButton = document.createElement('span');
   expandButton.classList.add('expandButton');
+  expandButton.addEventListener('click', () => {
+    articleContainer.classList.toggle('article-open');
+  })
 
   articleContainer.appendChild(articleTitle);
   articleContainer.appendChild(articleDate);
@@ -142,5 +145,7 @@ function MakeArticle(articleObj){
   articleContainer.appendChild(secondPara);
   articleContainer.appendChild(thirdPara);
   articleContainer.appendChild(expandButton);
+
+  return articleContainer;
 }
 
